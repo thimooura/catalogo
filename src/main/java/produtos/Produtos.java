@@ -1,7 +1,6 @@
 package produtos;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
@@ -17,7 +16,9 @@ import java.util.UUID;
 @Entity
 public class Produtos {
     @Id
-    private UUID  Id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, unique = true, nullable = false)
+    private UUID  id;
     @NotBlank
     private String name;
     @NotNull
@@ -28,11 +29,13 @@ public class Produtos {
     private LocalDateTime dataDoCadastro;
 
 
-    public Produtos(String id, String name, String description, String price) {
-        this.Id = UUID.randomUUID();
+    public Produtos(String name, String description, String price) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.dataDoCadastro = LocalDateTime.now();
     }
+
+
+
 }
