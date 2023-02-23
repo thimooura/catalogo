@@ -9,4 +9,6 @@ public interface ProdutoApi {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     ProdutoResponse postProduto(@RequestBody ProdutoRequest produtoRequest);
+
+    abstract ProdutoResponse postProdutoResponse(ProdutoRequest produtoRequest);
 }
