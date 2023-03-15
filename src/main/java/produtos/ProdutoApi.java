@@ -1,5 +1,6 @@
 package produtos;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public interface ProdutoApi {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    ProdutoResponse postProduto(@RequestBody ProdutoRequest produtoRequest);
+    ProdutoResponse postProduto(@Valid @RequestBody ProdutoRequest produtoRequest);
 
 
 }
