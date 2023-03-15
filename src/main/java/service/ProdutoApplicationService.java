@@ -1,7 +1,6 @@
-package produtos;
+package service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,8 @@ public class ProdutoApplicationService implements Produtoservice {
         log.info("[inicia] ProdutoApplicationService - criaProduto");
         Produtos produto = produtoRepository.salva(new Produtos(produtoRequest));
         log.info("[finaliza] ProdutoApplicationService - criaProduto");
-
-        return ProdutoResponse.builder().id(produto.getId()).build();
+        return ProdutoResponse.builder()
+                .id(produto.getId())
+                .build();
     }
 }

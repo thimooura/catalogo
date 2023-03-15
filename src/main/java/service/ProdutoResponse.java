@@ -1,4 +1,4 @@
-package produtos;
+package service;
 
 import jakarta.validation.Valid;
 import lombok.Builder;
