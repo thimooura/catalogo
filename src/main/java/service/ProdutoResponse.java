@@ -7,6 +7,6 @@ import java.util.UUID;
 @Valid
 @Builder
 public class ProdutoResponse {
-    private UUID id;
-}
+    private UUID idProduto;
 
+}

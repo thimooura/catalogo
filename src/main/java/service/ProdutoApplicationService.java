@@ -15,7 +15,7 @@ public class ProdutoApplicationService implements Produtoservice {
         Produtos produto = produtoRepository.salva(new Produtos(produtoRequest));
         log.info("[finaliza] ProdutoApplicationService - criaProduto");
         return ProdutoResponse.builder()
-                .id(produto.getIdProduto())
+                .idProduto(produto.getIdProduto())
                 .build();
     }
 }

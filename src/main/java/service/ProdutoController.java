@@ -16,7 +16,7 @@ public class ProdutoController implements ProdutoApi {
         ProdutoResponse produtoCriado = produtoService.criaProduto(produtoRequest);
         log.info("[finaliza] ProdutoController - postProduto");
 
-        return null;
+        return produtoCriado;
     }
 
 
