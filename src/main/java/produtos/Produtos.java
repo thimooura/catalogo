@@ -24,7 +24,7 @@ public class Produtos {
     @NotNull
     private String description;
     @NotNull
-    private String price;
+    private String preco;
 
     private LocalDateTime dataDoCadastro;
 
@@ -32,7 +32,7 @@ public class Produtos {
     public Produtos(String name, String description, String price) {
         this.name = name;
         this.description = description;
-        this.price = price;
+        this.preco = preco;
         this.dataDoCadastro = LocalDateTime.now();
     }
 
