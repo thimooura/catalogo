@@ -27,15 +27,12 @@ public class Produtos {
     private String preco;
 
     private LocalDateTime dataDoCadastro;
-
-
-    public Produtos(String name, String description, String price) {
-        this.name = name;
-        this.description = description;
-        this.preco = preco;
-        this.dataDoCadastro = LocalDateTime.now();
-    }
-
+        public Produtos(ProdutoRequest produtoRequest){
+            this.name = produtoRequest.getName();
+            this.description = produtoRequest.getDescription();
+            this.preco = produtoRequest.getPreco();
+            this.dataDoCadastro = LocalDateTime.now();
+        }
 
 
 }

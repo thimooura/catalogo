@@ -1,7 +1,11 @@
 package produtos;
 
-import java.util.UUID;
+import jakarta.validation.Valid;
+import lombok.Builder;
 
+import java.util.UUID;
+@Valid
+@Builder
 public class ProdutoResponse {
     private UUID id;
 }
