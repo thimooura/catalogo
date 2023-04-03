@@ -1,13 +1,17 @@
-package service;
+package application.service;
 
+import domain.Produtos;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.UUID;
+
 @Service
 @Log4j2
 @RequiredArgsConstructor
-public class ProdutoApplicationService implements Produtoservice {
+public abstract class ProdutoApplicationService implements Produtoservice {
     public final ProdutoRepository produtoRepository;
     @Override
     public ProdutoResponse criaProduto(ProdutoRequest produtoRequest) {
@@ -17,6 +21,18 @@ public class ProdutoApplicationService implements Produtoservice {
         return ProdutoResponse.builder()
                 .idProduto(produto.getIdProduto())
                 .build();
+    }
+
+    @Override
+    public List<ProdutoListResponse> buscaTodosProdutos() {
+        List<Produtos> produtos = produtoRepository.buscaTodosProdutos();
+        return ProdutoListResponse.converte(produtos);
+    }
+
+    @Override
+    public ProdutoDetalhadoResponse buscaProdutoAtravesId(UUID idProduto) {
+        Produtos produto = produtoRepository.buscaProdutosAtravesId(idProduto);
+        return new ProdutoDetalhadoResponse(produto);
     }
 }
  

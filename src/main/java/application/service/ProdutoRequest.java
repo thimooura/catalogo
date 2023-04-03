@@ -1,9 +1,13 @@
-package service;
+package application.service;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Value;
 
-public class ProdutoListResponse {
+@Value
+public class ProdutoRequest {
+
+
     @NotBlank
     private String name;
     @NotNull

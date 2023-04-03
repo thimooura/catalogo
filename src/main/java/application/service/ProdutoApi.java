@@ -1,7 +1,7 @@
-package service;
+package application.service;
 
 import jakarta.validation.Valid;
-import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.UUID;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,5 +18,7 @@ public interface ProdutoApi {
     @ResponseStatus(code = HttpStatus.OK)
     List<ProdutoListResponse> getTodosProdutos();
 
-
+    @GetMapping(value = "/{IdProduto}")
+    @ResponseStatus(code = HttpStatus.OK)
+    ProdutoListResponse getProdutoAtravesId(@PathVariable UUID idProduto);
 }

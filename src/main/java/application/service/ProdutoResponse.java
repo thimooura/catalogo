@@ -1,4 +1,4 @@
-package service;
+package application.service;
 
 import jakarta.validation.Valid;
 import lombok.Builder;

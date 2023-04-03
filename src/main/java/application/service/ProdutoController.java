@@ -1,7 +1,8 @@
-package service;
+package application.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.hibernate.validator.constraints.UUID;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -17,18 +18,26 @@ public class ProdutoController implements ProdutoApi {
         log.info("[inicia] ProdutoController - postProduto");
         ProdutoResponse produtoCriado = produtoService.criaProduto(produtoRequest);
         log.info("[finaliza] ProdutoController - postProduto");
-
         return produtoCriado;
     }
 
     @Override
     public List<ProdutoListResponse> getTodosProdutos() {
         log.info("[inicia] ProdutoController - getTodosProdutos");
+        List<ProdutoListResponse> produto2 = produtoService.buscaTodosProdutos();
         log.info("[finaliza] ProdutoController - getTodosProdutos");
+        return produto2;
+    }
 
+    @Override
+    public ProdutoListResponse getProdutoAtravesId(UUID idProduto) {
         return null;
+    }
+    public ProdutoDetalhadoResponse getProdutoAtravesUd(UUID idProduto){
+            return produtoService.buscaProdutoAtravesId(idProduto);
+        }
     }
 
 
-}
+
 
