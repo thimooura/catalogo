@@ -1,7 +1,7 @@
-package produtos.infra;
+package br.com.desafio.catalogo.cliente.infra;
 
 import org.hibernate.validator.constraints.UUID;
-import domain.Produtos;
+import br.com.desafio.catalogo.cliente.domain.Produtos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

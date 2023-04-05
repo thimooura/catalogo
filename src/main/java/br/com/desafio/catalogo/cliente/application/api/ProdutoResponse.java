@@ -1,4 +1,4 @@
-package application.service;
+package br.com.desafio.catalogo.cliente.application.api;
 
 import jakarta.validation.Valid;
 import lombok.Builder;

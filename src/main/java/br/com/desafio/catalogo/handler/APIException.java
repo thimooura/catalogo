@@ -1,4 +1,4 @@
-package handler;
+package br.com.desafio.catalogo.handler;
 
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;

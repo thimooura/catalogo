@@ -1,4 +1,4 @@
-package domain;
+package br.com.desafio.catalogo.cliente.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import application.service.ProdutoRequest;
+import br.com.desafio.catalogo.cliente.application.api.ProdutoRequest;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

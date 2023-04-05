@@ -1,15 +1,14 @@
-package produtos.infra;
+package br.com.desafio.catalogo.cliente.infra;
 
-import handler.APIException;
+import br.com.desafio.catalogo.handler.APIException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
-import application.service.ProdutoRepository;
-import domain.Produtos;
+import br.com.desafio.catalogo.cliente.application.repository.ProdutoRepository;
+import br.com.desafio.catalogo.cliente.domain.Produtos;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Repository

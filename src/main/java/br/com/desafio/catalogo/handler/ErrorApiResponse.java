@@ -1,4 +1,4 @@
-package handler;
+package br.com.desafio.catalogo.handler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;

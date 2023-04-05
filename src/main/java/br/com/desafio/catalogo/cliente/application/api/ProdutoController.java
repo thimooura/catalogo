@@ -1,5 +1,6 @@
-package application.service;
+package br.com.desafio.catalogo.cliente.application.api;
 
+import br.com.desafio.catalogo.cliente.application.service.Produtoservice;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.validator.constraints.UUID;
@@ -33,10 +34,11 @@ public class ProdutoController implements ProdutoApi {
     public ProdutoListResponse getProdutoAtravesId(UUID idProduto) {
         return null;
     }
-    public ProdutoDetalhadoResponse getProdutoAtravesUd(UUID idProduto){
-            return produtoService.buscaProdutoAtravesId(idProduto);
-        }
+
+    public ProdutoDetalhadoResponse getProdutoAtravesUd(UUID idProduto) {
+        return produtoService.buscaProdutoAtravesId(idProduto);
     }
+}
 
 
 

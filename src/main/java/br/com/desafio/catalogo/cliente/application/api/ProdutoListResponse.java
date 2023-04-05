@@ -1,6 +1,6 @@
-package application.service;
+package br.com.desafio.catalogo.cliente.application.api;
 
-import domain.Produtos;
+import br.com.desafio.catalogo.cliente.domain.Produtos;
 import lombok.Value;
 
 import java.util.List;

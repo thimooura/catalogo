@@ -1,10 +1,8 @@
-package application.service;
+package br.com.desafio.catalogo.cliente.application.repository;
 
-import domain.Produtos;
-import org.hibernate.validator.constraints.UUID;
+import br.com.desafio.catalogo.cliente.domain.Produtos;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProdutoRepository {
     Produtos salva(Produtos produtos);
