@@ -1,10 +1,11 @@
-package application.service;
+package br.com.desafio.produto.application.api;
 
-import domain.Produtos;
 import lombok.Value;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
+import br.com.desafio.produto.domain.Produtos;
 
 @Value
 public class ProdutoListResponse {

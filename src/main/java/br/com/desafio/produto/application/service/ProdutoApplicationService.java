@@ -1,9 +1,15 @@
-package application.service;
+package br.com.desafio.produto.application.service;
 
-import domain.Produtos;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
+
+import br.com.desafio.produto.application.api.ProdutoDetalhadoResponse;
+import br.com.desafio.produto.application.api.ProdutoListResponse;
+import br.com.desafio.produto.application.api.ProdutoRequest;
+import br.com.desafio.produto.application.api.ProdutoResponse;
+import br.com.desafio.produto.application.repository.ProdutoRepository;
+import br.com.desafio.produto.domain.Produtos;
 
 import java.util.List;
 import java.util.UUID;
