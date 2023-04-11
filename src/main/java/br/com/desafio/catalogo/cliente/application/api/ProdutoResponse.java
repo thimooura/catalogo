@@ -1,10 +1,12 @@
 package br.com.desafio.catalogo.cliente.application.api;
 
-import jakarta.validation.Valid;
+import java.util.UUID;
+
 import lombok.Builder;
+import lombok.Value;
 
 import java.util.UUID;
-@Valid
+@Value
 @Builder
 public class ProdutoResponse {
     private UUID idProduto;
