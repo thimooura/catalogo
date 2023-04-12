@@ -10,9 +10,7 @@ import br.com.desafio.produto.application.api.ProdutoResponse;
 
 public interface Produtoservice {
 	ProdutoResponse criaProduto(ProdutoRequest produtoRequest);
-
 	List<ProdutoListResponse> buscaTodosProdutos();
-
 	ProdutoDetalhadoResponse buscaProdutoAtravesId(UUID idProduto);
 
 }
